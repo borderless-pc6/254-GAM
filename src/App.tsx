@@ -2,12 +2,14 @@ import { useState } from 'react'
 import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
 import Dashboard from './components/Dashboard'
+import DocumentosPage from './components/DocumentosPage'
 import './App.css'
 
 function App() {
   const [isLogin, setIsLogin] = useState(true)
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [userEmail, setUserEmail] = useState('')
+  const [currentPage, setCurrentPage] = useState('dashboard')
 
   const handleLogin = (email: string, password: string) => {
     // Aqui você implementaria a lógica de login
@@ -27,13 +29,29 @@ function App() {
     setIsAuthenticated(false)
     setIsLogin(true)
     setUserEmail('')
+    setCurrentPage('dashboard')
+  }
+
+  const handlePageChange = (page: string) => {
+    setCurrentPage(page)
   }
 
   if (isAuthenticated) {
+    if (currentPage === 'documentos') {
+      return (
+        <DocumentosPage
+          onLogout={handleLogout}
+          userEmail={userEmail}
+          onPageChange={handlePageChange}
+        />
+      )
+    }
+
     return (
       <Dashboard
         onLogout={handleLogout}
         userEmail={userEmail}
+        onPageChange={handlePageChange}
       />
     )
   }

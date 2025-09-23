@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-body {
+/* Container principal */
+.auth-container {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   background: #f8fafc;
   min-height: 100vh;
@@ -13,9 +14,12 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-body::before {
+.auth-container::before {
   content: '';
   position: fixed;
   top: 0;
@@ -29,23 +33,13 @@ body::before {
   z-index: -1;
 }
 
-/* Container principal */
-.auth-container {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 /* Card de autenticação */
 .auth-card {
   background: #ffffff;
-  border-radius: 16px;
-  padding: 40px;
+  border-radius: 12px;
+  padding: 32px;
   width: 100%;
+  max-width: 400px;
   box-shadow: 
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06),
@@ -62,7 +56,7 @@ body::before {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 3px;
   background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
 }
 
@@ -80,22 +74,22 @@ body::before {
 /* Cabeçalho */
 .auth-header {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   position: relative;
   z-index: 1;
 }
 
 .auth-header h2 {
   color: #1e293b;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   letter-spacing: -0.025em;
 }
 
 .auth-header p {
   color: #64748b;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -104,13 +98,13 @@ body::before {
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .form-group label {
@@ -120,10 +114,10 @@ body::before {
 }
 
 .form-group input {
-  padding: 12px 16px;
+  padding: 10px 14px;
   border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 6px;
+  font-size: 14px;
   transition: all 0.2s ease;
   background: #fff;
   color: #374151;
@@ -152,16 +146,16 @@ body::before {
 
 .password-input input {
   width: 100%;
-  padding-right: 50px;
+  padding-right: 40px;
 }
 
 .password-toggle {
   position: absolute;
-  right: 12px;
+  right: 10px;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   color: #a0aec0;
   transition: color 0.3s ease;
   padding: 4px;
@@ -176,7 +170,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 .checkbox-container {
@@ -186,7 +180,7 @@ body::before {
   font-size: 14px;
   color: #4a5568;
   position: relative;
-  padding-left: 30px;
+  padding-left: 28px;
 }
 
 .checkbox-container input[type="checkbox"] {
@@ -202,11 +196,11 @@ body::before {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   background-color: #fff;
   border: 2px solid #e2e8f0;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: all 0.3s ease;
 }
 
@@ -223,10 +217,10 @@ body::before {
   content: "";
   position: absolute;
   display: none;
-  left: 5px;
-  top: 2px;
-  width: 4px;
-  height: 8px;
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 6px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
@@ -266,13 +260,13 @@ body::before {
   background: #3b82f6;
   color: white;
   border: none;
-  padding: 14px 24px;
-  border-radius: 8px;
-  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  margin-top: 10px;
+  margin-top: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
@@ -307,8 +301,8 @@ body::before {
 /* Rodapé */
 .auth-footer {
   text-align: center;
-  margin-top: 30px;
-  padding-top: 20px;
+  margin-top: 24px;
+  padding-top: 16px;
   border-top: 1px solid #e2e8f0;
 }
 
@@ -335,21 +329,21 @@ body::before {
 /* Responsividade */
 @media (max-width: 480px) {
   .auth-container {
-    padding: 10px;
+    padding: 16px;
   }
   
   .auth-card {
-    padding: 30px 20px;
-    border-radius: 16px;
+    padding: 24px 20px;
+    border-radius: 12px;
   }
   
   .auth-header h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
   
   .form-options {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     align-items: flex-start;
   }
 }
