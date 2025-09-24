@@ -3,6 +3,8 @@ import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
 import Dashboard from './components/Dashboard'
 import DocumentosPage from './components/DocumentosPage'
+import AuditoriasPage from './components/AuditoriasPage'
+import AssistentePage from './components/AssistentePage'
 import './App.css'
 
 function App() {
@@ -40,6 +42,26 @@ function App() {
     if (currentPage === 'documentos') {
       return (
         <DocumentosPage
+          onLogout={handleLogout}
+          userEmail={userEmail}
+          onPageChange={handlePageChange}
+        />
+      )
+    }
+
+    if (currentPage === 'auditorias') {
+      return (
+        <AuditoriasPage
+          onLogout={handleLogout}
+          userEmail={userEmail}
+          onPageChange={handlePageChange}
+        />
+      )
+    }
+
+    if (currentPage === 'assistente') {
+      return (
+        <AssistentePage
           onLogout={handleLogout}
           userEmail={userEmail}
           onPageChange={handlePageChange}

@@ -132,7 +132,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout, userEmail, onPageChange
                         <li>
                             <button
                                 className={`nav-item ${activeTab === 'auditorias' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('auditorias')}
+                                onClick={() => onPageChange('auditorias')}
                             >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
@@ -143,7 +143,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout, userEmail, onPageChange
                         <li>
                             <button
                                 className={`nav-item ${activeTab === 'assistente' ? 'active' : ''}`}
-                                onClick={() => setActiveTab('assistente')}
+                                onClick={() => onPageChange('assistente')}
                             >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />

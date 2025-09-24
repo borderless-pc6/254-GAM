@@ -103,9 +103,10 @@ export default function DocumentosPage({ onLogout, userEmail, onPageChange }: Do
                                 className="btn-ghost mr-2"
                                 onClick={() => onPageChange('dashboard')}
                             >
-                                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                                <svg className="h-4 w-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
                                 </svg>
+                                Voltar
                             </button>
                             <svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
