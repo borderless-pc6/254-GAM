@@ -57,7 +57,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+  background: linear-gradient(90deg, #059669, #047857, #065f46);
 }
 
 @keyframes slideUp {
@@ -125,8 +125,8 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
 }
 
 .form-group input:hover {
@@ -162,7 +162,7 @@
 }
 
 .password-toggle:hover {
-  color: #3b82f6;
+  color: #059669;
 }
 
 /* Opções do formulário */
@@ -205,12 +205,12 @@
 }
 
 .checkbox-container:hover input ~ .checkmark {
-  border-color: #3b82f6;
+  border-color: #059669;
 }
 
 .checkbox-container input:checked ~ .checkmark {
-  background-color: #3b82f6;
-  border-color: #3b82f6;
+  background-color: #059669;
+  border-color: #059669;
 }
 
 .checkmark:after {
@@ -231,7 +231,7 @@
 }
 
 .forgot-password {
-  color: #3b82f6;
+  color: #059669;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -239,25 +239,25 @@
 }
 
 .forgot-password:hover {
-  color: #2563eb;
+  color: #047857;
   text-decoration: underline;
 }
 
 .terms-link {
-  color: #3b82f6;
+  color: #059669;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .terms-link:hover {
-  color: #2563eb;
+  color: #047857;
   text-decoration: underline;
 }
 
 /* Botão de autenticação */
 .auth-button {
-  background: #3b82f6;
+  background: #059669;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -284,9 +284,9 @@
 }
 
 .auth-button:hover {
-  background: #2563eb;
+  background: #047857;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
 }
 
 .auth-button:hover::before {
@@ -295,7 +295,7 @@
 
 .auth-button:active {
   transform: translateY(0);
-  background: #1d4ed8;
+  background: #065f46;
 }
 
 /* Rodapé */
@@ -314,7 +314,7 @@
 .switch-button {
   background: none;
   border: none;
-  color: #3b82f6;
+  color: #059669;
   font-weight: 600;
   cursor: pointer;
   text-decoration: underline;
@@ -323,7 +323,7 @@
 }
 
 .switch-button:hover {
-  color: #2563eb;
+  color: #047857;
 }
 
 /* Responsividade */

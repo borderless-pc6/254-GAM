@@ -5,6 +5,8 @@ import Dashboard from './components/Dashboard'
 import DocumentosPage from './components/DocumentosPage'
 import AuditoriasPage from './components/AuditoriasPage'
 import AssistentePage from './components/AssistentePage'
+import ConformidadePage from './components/ConformidadePage'
+import ConfiguracoesPage from './components/ConfiguracoesPage'
 import './App.css'
 
 function App() {
@@ -62,6 +64,26 @@ function App() {
     if (currentPage === 'assistente') {
       return (
         <AssistentePage
+          onLogout={handleLogout}
+          userEmail={userEmail}
+          onPageChange={handlePageChange}
+        />
+      )
+    }
+
+    if (currentPage === 'conformidade') {
+      return (
+        <ConformidadePage
+          onLogout={handleLogout}
+          userEmail={userEmail}
+          onPageChange={handlePageChange}
+        />
+      )
+    }
+
+    if (currentPage === 'configuracoes') {
+      return (
+        <ConfiguracoesPage
           onLogout={handleLogout}
           userEmail={userEmail}
           onPageChange={handlePageChange}
