@@ -120,6 +120,28 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout, userEmail, onPageChange
                         </li>
                         <li>
                             <button
+                                className={`nav-item ${activeTab === 'contas-bancarias' ? 'active' : ''}`}
+                                onClick={() => onPageChange('contas-bancarias')}
+                            >
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                                </svg>
+                                Contas Bancárias
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                className={`nav-item ${activeTab === 'contas-pagar' ? 'active' : ''}`}
+                                onClick={() => onPageChange('contas-pagar')}
+                            >
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                                </svg>
+                                Contas a Pagar
+                            </button>
+                        </li>
+                        <li>
+                            <button
                                 className={`nav-item ${activeTab === 'documentos' ? 'active' : ''}`}
                                 onClick={() => onPageChange('documentos')}
                             >
@@ -305,29 +327,29 @@ const Dashboard: React.FC<DashboardProps> = ({ onLogout, userEmail, onPageChange
                     <div className="quick-actions">
                         <h3>Ações Rápidas</h3>
                         <div className="actions-grid">
-                            <button className="action-btn">
+                            <button className="action-btn" onClick={() => onPageChange('contas-bancarias')}>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                                </svg>
+                                Contas Bancárias
+                            </button>
+                            <button className="action-btn" onClick={() => onPageChange('contas-pagar')}>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
                                 </svg>
-                                Emitir Documentos
+                                Contas a Pagar
                             </button>
-                            <button className="action-btn">
+                            <button className="action-btn" onClick={() => onPageChange('documentos')}>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
                                 </svg>
-                                Gerar Relatório
+                                Documentos
                             </button>
-                            <button className="action-btn">
+                            <button className="action-btn" onClick={() => onPageChange('auditorias')}>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
                                 </svg>
-                                Nova Auditoria
-                            </button>
-                            <button className="action-btn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
-                                </svg>
-                                Monitorar IA
+                                Auditorias
                             </button>
                         </div>
                     </div>

@@ -122,6 +122,28 @@ export default function DocumentosPage({ onLogout, userEmail, onPageChange }: Do
                             </button>
                         </li>
                         <li>
+                            <button
+                                className="nav-item"
+                                onClick={() => onPageChange('contas-bancarias')}
+                            >
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                                </svg>
+                                Contas Bancárias
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                className="nav-item"
+                                onClick={() => onPageChange('contas-pagar')}
+                            >
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                                </svg>
+                                Contas a Pagar
+                            </button>
+                        </li>
+                        <li>
                             <button className="nav-item active">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />

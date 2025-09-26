@@ -2,6 +2,8 @@ import { useState } from 'react'
 import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
 import Dashboard from './components/Dashboard'
+import ContasBancariasPage from './components/ContasBancariasPage'
+import ContasPagarPage from './components/ContasPagarPage'
 import DocumentosPage from './components/DocumentosPage'
 import AuditoriasPage from './components/AuditoriasPage'
 import AssistentePage from './components/AssistentePage'
@@ -41,6 +43,26 @@ function App() {
   }
 
   if (isAuthenticated) {
+    if (currentPage === 'contas-bancarias') {
+      return (
+        <ContasBancariasPage
+          onLogout={handleLogout}
+          userEmail={userEmail}
+          onPageChange={handlePageChange}
+        />
+      )
+    }
+
+    if (currentPage === 'contas-pagar') {
+      return (
+        <ContasPagarPage
+          onLogout={handleLogout}
+          userEmail={userEmail}
+          onPageChange={handlePageChange}
+        />
+      )
+    }
+
     if (currentPage === 'documentos') {
       return (
         <DocumentosPage
